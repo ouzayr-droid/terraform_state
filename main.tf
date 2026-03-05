@@ -39,6 +39,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
   }
 }
 
+# !important: le backend terraform ne permet pas d'utiliser des variables, il faut donc hardcoder les valeurs
 terraform {
   backend "s3" {
     # Replace this with your bucket name!
